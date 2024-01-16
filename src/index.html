@@ -3,9 +3,180 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>ToDo List</title>
+	<title>Tasks List</title>
 </head>
 <body>
-	
+	<div class="main-container" id="app">
+		<div class="modal-wrap">
+			<div class="modal-main">
+				<div class="modal-mess">
+					
+			Can't add an empty task / 
+			Do you want to delete this task? / 
+			Board saved /
+			Board loaded /
+			Board cleared 
+				
+				</div>
+				<!-- /.modal-mess -->
+				<div class="modal-buttons">
+					<button class="interface-button modal-button-yes modal-button" data-id-task=''>Yes</button>
+					<!-- /.modal-button-yes modal-button -->
+					<button class="interface-button modal-button-cancel modal-button">Cancel</button>
+					<!-- /.modal-button-cancel modal-button -->
+				</div>
+				<!-- /.modal-buttons -->
+			</div>
+			<!-- /.modal-main -->
+		</div>	
+		<!-- /.modal-wrap -->	
+		<header class="header">
+			<h1 class="header-title">List Tasks</h1>
+			<!-- /.header-title -->
+		</header>
+		<!-- /.header -->
+		<main class="main">
+			<div class="interface">
+				
+					<button class="interface-button interface-load">Load Board</button>
+					<!-- /.interface-load -->
+					<button class="interface-button interface-save">Save Board</button>
+				
+				<!-- /.interface-block -->
+				<button class="interface-button interface-new">Clear Board</button>
+				<!-- /.interface-new -->
+			</div>
+			<!-- /.interface -->
+			<div class="new-task">
+				<h2 class="new-task__title title-section">New Task:</h2>
+				<div class="new-task-block">
+					<input type="text" class="new-task__input" placeholder="Description">
+					<div class="task__clear new-task__del">&cross;</div>
+				</div>
+			</div>
+			<!-- /.new-task -->
+			<div class="pinned-tasks">
+				<h2 class="pinned-tasks__title title-section">
+					Pinned Tasks:
+				</h2>
+				<!-- /.pinned-tasks__title title -->
+				<div class="empty-list-task empty-pinned-task">
+					No pinned tasks
+				</div>
+				<div class="task task-pinned">
+					<div class="task__main-block">
+						Сперва тут стилизуем задачи
+						<!-- /.task__descr -->
+						<label class="task__pinned-is-block" for="task-1">
+							<input type="checkbox" class="task__is-pinned-input hidden-item" id="task-1" checked="checked">
+							<!-- /.task__is-pinned-input -->
+							<div class="task__is-pinned-button"></div>
+							<!-- /.task__is-pinned-button -->
+						</label>
+						<!-- /.task__pinned-is-block -->
+					</div>
+					<div class="task__clear task__del">&cross;</div>
+					<!-- /.task__clear task__del -->
+				</div>
+				<!-- /.task -->
+				<div class="task task-pinned">
+					<div class="task__main-block">
+						Пропишем все стилиПропишем все стилиПропишем все стилиПропишем все стилиПропишем все стилиПропишем все стилиПропишем все стилиПропишем все стили
+						<!-- /.task__descr -->
+						<label class="task__pinned-is-block" for="task-2">
+							<input type="checkbox" class="task__is-pinned-input hidden-item" id="task-2" checked="checked">
+							<!-- /.task__is-pinned-input -->
+							<div class="task__is-pinned-button"></div>
+							<!-- /.task__is-pinned-button -->
+						</label>
+						<!-- /.task__pinned-is-block -->
+					</div>
+					<div class="task__clear task__del">&cross;</div>
+					<!-- /.task__clear task__del -->
+				</div>
+				<!-- /.task -->
+				<div class="task task-pinned">
+					<div class="task__main-block">
+						Это первый этап
+						<!-- /.task__descr -->
+						<label class="task__pinned-is-block" for="task-3">
+							<input type="checkbox" class="task__is-pinned-input hidden-item" id="task-3" checked="checked">
+							<!-- /.task__is-pinned-input -->
+							<div class="task__is-pinned-button"></div>
+							<!-- /.task__is-pinned-button -->
+						</label>
+						<!-- /.task__pinned-is-block -->
+					</div>
+					<div class="task__clear task__del">&cross;</div>
+					<!-- /.task__clear task__del -->
+				</div>
+				<!-- /.task -->
+			</div>
+			<!-- /.pinned-tasks -->
+			<div class="all-tasks">
+				<h2 class="all-tasks__title title-section">
+					Other Tasks:
+				</h2>
+				<!-- /.all-tasks__title title -->
+				<div class="empty-list-task empty-all-task">
+					No tasks found
+				</div>
+				<div class="task">
+					<div class="task__main-block">
+						Затем разобьем и перенесем этот кусок в рендеринг
+						<!-- /.task__descr -->
+						<label class="task__pinned-is-block" for="task-4">
+							<input type="checkbox" class="task__is-pinned-input hidden-item" id="task-4">
+							<!-- /.task__is-pinned-input -->
+							<div class="task__is-pinned-button"></div>
+							<!-- /.task__is-pinned-button -->
+						</label>
+						<!-- /.task__pinned-is-block -->
+					</div>
+					<div class="task__clear task__del">&cross;</div>
+					<!-- /.task__clear task__del -->
+				</div>
+				<!-- /.task -->
+				<div class="task">
+					<div class="task__main-block">
+						Полсле чего можно заняться управлением
+						<!-- /.task__descr -->
+						<label class="task__pinned-is-block" for="task-5">
+							<input type="checkbox" class="task__is-pinned-input hidden-item" id="task-5">
+							<!-- /.task__is-pinned-input -->
+							<div class="task__is-pinned-button"></div>
+							<!-- /.task__is-pinned-button -->
+						</label>
+						<!-- /.task__pinned-is-block -->
+					</div>
+					<!-- /.task__pinned -->
+					<div class="task__clear task__del">&cross;</div>
+					<!-- /.task__clear task__del -->
+				</div>
+				<!-- /.task -->
+				<div class="task">
+					<div class="task__main-block">
+						И наконец сделать сохранение
+						<!-- /.task__descr -->
+						<label class="task__pinned-is-block" for="task-6">
+							<input type="checkbox" class="task__is-pinned-input hidden-item" id="task-6">
+							<!-- /.task__is-pinned-input -->
+							<div class="task__is-pinned-button"></div>
+							<!-- /.task__is-pinned-button -->
+						</label>
+						<!-- /.task__pinned-is-block -->
+					</div>
+					<div class="task__clear task__del">&cross;</div>
+					<!-- /.task__clear task__del -->
+				</div>
+				<!-- /.task -->
+			</div>
+			<!-- /.all-tasks -->
+		</main>
+		<!-- /.main -->
+		<footer class="footer"></footer>
+	</div>
+		<!-- /#app.main-container -->
+	<!-- /.footer -->
 </body>
 </html>

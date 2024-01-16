@@ -1,5 +1,5 @@
 export default class State {
-	constructor () {
+	constructor() {
 		this.idNewTask = 0;
 		this.pinnedTasks = [];
 		this.otherTasks = [];
@@ -8,19 +8,17 @@ export default class State {
 	}
 
 	saveBoard() {
-//тут будет основная логика сохранения текущего стейта в локалсторэдж
+		//тут будет основная логика сохранения текущего стейта в локалсторэдж
 
 		return false;
 	}
 
-	loadBoard () {
+	loadBoard() {
 		const savedBoard = [];
 
 		return savedBoard;
-//тут по аналоги основная логика загрузки из локал стораджа, 
+		//тут по аналоги основная логика загрузки из локал стораджа,
 	}
 
-	clearState() {
-		
-	}
+	clearState() {}
 }

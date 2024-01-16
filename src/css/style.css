@@ -2,6 +2,7 @@ body {
 	background-image: url('../img/background.jpg');
 	background-size: cover;
 	background-repeat: no-repeat;
+	min-height: 100vh
 }
 
 .main-container {
@@ -23,7 +24,7 @@ body {
 .interface-button {
 	padding: 10px 30px;
 	flex-grow: 1;
-	margin: 5px;
+	margin: 15px 3px 0;
 	background-color: #FFFFFF;
 	box-shadow: 0 0 3px 1px #D2D2D2;
 	font-size: 16px;
@@ -62,7 +63,7 @@ body {
 	box-shadow: inset 0 0 3px 3px white;
 	font-size: 16px;
 	font-weight: 500;
-	flex-basis: 95%;
+	flex-basis: 90%;
 	border-radius: 10px;
 }
 
@@ -112,14 +113,27 @@ body {
 
 }
 
-.task__clear {
+.new-task-buttons {
+	display: flex;
+	flex-basis: 10%;
+	justify-content: space-around;	
 	font-size: 25px;
-	font-weight: 900;
-	cursor: pointer;
-	flex-basis: 5%;
-	color: red;
+	font-weight: 700;
 	margin: 5px;
 	text-align: center;
+	flex-shrink: 1;
+}
+
+.task__clear {
+	color: red;
+	padding: 0 10px;
+	cursor: pointer;
+}
+
+.task__add {
+	color: green;
+	padding: 0 10px;
+	cursor: pointer;
 }
 
 .hidden-item {
@@ -176,7 +190,7 @@ body {
 	display: flex;
 }
 
-.interface-button {
+.modal-button {
 	width: 150px;
 	margin: 0 10px;
 }

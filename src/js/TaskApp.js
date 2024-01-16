@@ -1,69 +1,73 @@
+import Render from "./Render";
+
 export default class TaskApp {
-	constructor (container, state, render) {
+	constructor(container, state) {
 		this.container = document.querySelector(container);
 		this.state = state;
-		this.render = render;
+		this.render = new Render(this.container);
 
 		this.init();
 	}
 
-	init	() {
-
+	init() {
+		this.render.renderPage();
+		this.registerEvents();
 	}
 
-	registerEvent () {
-
+	registerEvents() {
+		this.render.addClickInterfaceButtons(this.onClickInterfaceButtons.bind(this));
+		this.render.addChangeNewTaskInput(this.onChangeNewTaskInput.bind(this));
+		this.render.addKeyPressNewTaskInput(this.onKeyPressNewTaskInput.bind(this));
+		this.render.addClickNewTaskButtons(this.onClickNewTaskButtons.bind(this));
+		this.render.addClickPinnedTasks(this.onClickPinnedTasks.bind(this));
+		this.render.addClickOtherTasks(this.onClickOtherTasks.bind(this));
 	}
 
-	addFilterTasks() {
-
+	onClickInterfaceButtons(event) {
+		console.log(event)
 	}
 
-	clearFilterTasks() {
-
+	onChangeNewTaskInput(event) {
+console.log(event)
 	}
 
-	createNewTask() {
-
+	onKeyPressNewTaskInput(event) {
+	console.log(event)
 	}
 
-	addNewTask(){
-
+	onClickNewTaskButtons(event) {
+console.log(event)
 	}
 
-	createErrorAddTask() {
-
+	onClickPinnedTasks(event) {
+console.log(event)
 	}
 
-	createInterfaceMess() {
-
+	onClickOtherTasks(event) {
+console.log(event)
 	}
 
-	createInterfaceError() {
+	addFilterTasks() {}
 
-	}
+	clearFilterTasks() {}
 
-	createInterfaceError() {
+	createNewTask() {}
 
-	}
+	addNewTask() {}
 
+	createErrorAddTask() {}
 
-	createConfirmRemoveTask(task) {
+	createInterfaceMess() {}
 
-	}
+	createInterfaceError() {}
 
-	createConfirmClearBoard() {
+	createInterfaceError() {}
 
-	}
+	createConfirmRemoveTask(task) {}
 
-	createConfirmLoadBoard() {
-		
-	}
+	createConfirmClearBoard() {}
 
-	removeTask(task) {
+	createConfirmLoadBoard() {}
 
-	}
-
+	removeTask(task) {}
 }
-
-

@@ -1,12 +1,19 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
 body {
 	background-image: url('../img/background.jpg');
 	background-size: cover;
 	background-repeat: no-repeat;
-	min-height: 100vh
+	min-height: 100vh;
 }
 
 .main-container {
 	position: relative;
+	padding: 5px;
 }
 
 .header-title {
@@ -30,7 +37,7 @@ body {
 	font-size: 16px;
 	font-weight: 700;
 	border: 1px solid #D2D2D2;
-	border-radius: 10px;
+	border-radius: 25px;
 	cursor: pointer;
 }
 
@@ -64,11 +71,12 @@ body {
 	font-size: 16px;
 	font-weight: 500;
 	flex-basis: 90%;
-	border-radius: 10px;
+	border-radius: 25px 0 0 25px;
 }
 
 .new-task__input:focus {
 	outline: #000 solid 1px;
+	outline-offset: -1px;
 }
 
 .empty-list-task {
@@ -98,13 +106,14 @@ body {
 }
 
 .task__is-pinned-button {
-	height: 25px;
-	width: 25px;
+	height: 35px;
+	width: 35px;
 	border-radius: 50%;
 	border: 1px solid #D2D2D2;
 	box-shadow: 0 0 3px 1px #D2D2D2;
-	margin: 5px;
 	cursor: pointer;
+	margin: -5px;
+	margin-left: 5px;
 }
 
 .task__is-pinned-input:checked ~ .task__is-pinned-button {
@@ -116,24 +125,40 @@ body {
 .new-task-buttons {
 	display: flex;
 	flex-basis: 10%;
-	justify-content: space-around;	
-	font-size: 25px;
-	font-weight: 700;
-	margin: 5px;
-	text-align: center;
-	flex-shrink: 1;
+	justify-content: space-between;	
+	cursor: pointer;
 }
 
 .task__clear {
 	color: red;
-	padding: 0 10px;
+	padding: 5px;
+	margin: 0 5px;
 	cursor: pointer;
+	font-size: 25px;
+	font-weight: 700;
+	text-align: center;
+	flex-shrink: 1;
+	flex-basis: 5%;
+}
+
+.new-task__del {
+	flex-basis: 50%;
 }
 
 .task__add {
 	color: green;
-	padding: 0 10px;
-	cursor: pointer;
+	background-color: #FFFFFF;
+	padding: 5px;
+	border: none;
+	box-shadow: inset 0 0 3px 3px white;
+	font-size: 25px;
+	font-weight: 500;
+	flex-basis: 50%;
+	border-radius: 0 25px 25px 0;
+	flex-shrink: 1;
+	vertical-align: center;
+	text-align: center;
+	margin-left: 1px;
 }
 
 .hidden-item {
@@ -161,19 +186,15 @@ body {
 	display: flex;
 }
 
-.modal-wrap {
-	display: none;
-}
-
 .modal-wrap:before {
 	content: '';
 	top: 0;
 	left: 0;
 	width: 100%;
-	height: 100%;
-	background-color: rgba(0, 0, 0, 0.6);
+	height: 100vh;
+	background-color: rgba(0, 0, 0, 0.3);
 	position: absolute;
-	box-shadow: 0 0 5px 5px green;
+	box-shadow: inset 0 0 1px 1px green;
 }
 
 .modal-mess {
@@ -196,5 +217,9 @@ body {
 }
 
 .modal-wrap_error:before {
-	box-shadow: 0 0 5px 5px red;
+	box-shadow: inset 0 0 1px 1px red;
+}
+
+.no-scroll {
+	overflow: hidden;
 }

@@ -138,11 +138,12 @@ body {
 	font-weight: 700;
 	text-align: center;
 	flex-shrink: 1;
-	flex-basis: 5%;
+	width: 50px;
 }
 
 .new-task__del {
 	flex-basis: 50%;
+	width: 50px;
 }
 
 .task__add {

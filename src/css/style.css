@@ -139,6 +139,7 @@ body {
 	text-align: center;
 	flex-shrink: 1;
 	width: 50px;
+	margin: auto;
 }
 
 .new-task__del {
